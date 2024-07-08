@@ -59,7 +59,6 @@ def update_course(cid: str, course_update: schemas.Course, db: Session = Depends
 def abcd():
     pass
 
-
 @app.post("/CreateLecturer/")
 def create_lecturer(lecturer: schemas.Lecturer, db: Session = Depends(get_db)):
     DataValidation.lid_check(lecturer.lid)
